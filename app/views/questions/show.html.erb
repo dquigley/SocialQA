@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @question.category %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @question.question %>
+</p>
+
+<p>
+  <b>Qformat:</b>
+  <%= @question.qformat %>
+</p>
+
+<p>
+  <b>Canswer:</b>
+  <%= @question.canswer %>
+</p>
+
+<h2>Answers</h2>
+<% @question.answers.each do |answer| %>
+  <p>
+    <b>Answer:</b>
+    <%= answer.answer %>
+  </p>
+<% end %>
+
+<h2>Add an answer:</h2>
+<%= form_for([@question, @question.answers.build]) do |f| %>
+  <div class="field">
+    <%= f.label :answer %><br />
+    <%= f.text_field :answer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

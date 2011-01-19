@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  category: MyString
+  question: MyText
+  qformat: MyString
+  canswer: 1
+
+two:
+  category: MyString
+  question: MyText
+  qformat: MyString
+  canswer: 1
