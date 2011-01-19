@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110111003918) do
+ActiveRecord::Schema.define(:version => 20110119005108) do
 
   create_table "answers", :force => true do |t|
     t.string   "answer"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(:version => 20110111003918) do
     t.text     "question"
     t.string   "qformat"
     t.integer  "canswer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "hashed_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
